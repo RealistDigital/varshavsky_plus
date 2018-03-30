@@ -1,0 +1,24 @@
+#house-panorama-360 {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+#old-frame {
+    margin: 0 auto;
+    width: 720px;
+    height: 570px;
+    background-repeat: no-repeat;
+}
+#debug {
+    margin: 0 auto;
+    height: 20px;
+    width: 720px;
+    margin-bottom: 5px;
+    outline:1px solid green;
+}
+#preloader {
+    margin: 0 auto;
+    height: 570px;
+    width: 720px;
+    background: url("../img/preloader.gif") center center no-repeat;
+}

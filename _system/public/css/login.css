@@ -1,0 +1,165 @@
+@import url(reset.css);
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("../img/body.jpg") repeat;
+}
+#login-wp {
+    position: relative;
+    margin: 170px auto 0 auto;
+    width: 1000px;
+    height: 500px;
+}
+#form {
+    position: absolute;
+    top:50px;
+    left: 50%;
+    margin-left: -256px;
+    z-index:3;
+    width: 512px;
+    height: 250px;
+    background:url("../img/login/bg_login.png") no-repeat;
+}
+/** Тени */
+#top-shadow {
+    display: none;
+    width: 442px;
+    height: 93px;
+    position: absolute;
+    left: 264px;
+    top: -38px;
+    z-index:2;
+    background: url("../img/login/top-shadow.png") no-repeat;
+}
+#right-shadow {
+    width: 197px;
+    height: 259px;
+    position: absolute;
+    right: 84px;
+    top: 43px;
+    z-index:2;
+    background: url("../img/login/right-shadow.png") no-repeat;
+}
+#left-shadow {
+    width: 197px;
+    height: 259px;
+    position: absolute;
+    left: 84px;
+    top: 43px;
+    z-index:2;
+    background: url("../img/login/left-shadow.png") no-repeat;
+}
+#bott-shadow {
+    width:500px;
+    height: 42px;
+    position: absolute;
+    left: 242px;
+    top: 289px;
+    z-index:2;
+    background: url("../img/login/bott-shadow.png") no-repeat;
+}
+#clone-form {
+    width:500px;
+    height: 125px;
+    position: absolute;
+    left: 250px;
+    top: 335px;
+    z-index:2;
+    background: url("../img/login/clone-form.png") no-repeat;
+}
+/** Поля формы */
+.field-login {
+    width: 260px;
+    height: 32px;
+    position: absolute;
+    left: 74px;
+    top: 84px;
+    z-index:3;
+    background-color: #FFF;
+	border: 1px solid #666;
+}
+.field-pass {
+    width: 260px;
+    height: 32px;
+    position: absolute;
+    left: 74px;
+    top: 130px;
+    z-index:3;
+    background-color: #FFF;
+	border: 1px solid #666;
+}
+.field-button {
+    width: 78px;
+    height: 78px;
+    position: absolute;
+    border: none;
+    left: 370px;
+    top: 84px;
+    z-index:3;
+    background: url("../img/login/go.png") no-repeat;
+	cursor: pointer;
+}
+.field-button:hover {
+	background: url("../img/login/go_h.png") no-repeat;
+	transition: all 0.2s ease-in-out;
+}
+.field-pass input,
+.field-login input {
+    height: 17px;
+    margin: 5px 0 0 7px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    color:#000;
+    font: 14px Verdana, sans-serif;
+}
+.remember-me {
+    left: 76px;
+    outline: 1px solid #39393A;
+    position: absolute;
+    top: 187px;
+}
+.lable-remember {
+    color: #000;
+    font: 14px Verdana,sans-serif;
+    left: 104px;
+    position: absolute;
+    top: 189px;
+}
+.powered {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.link,
+.powered {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.link:hover,
+.powered:hover {
+	text-decoration: underline;
+}
+
+.logo {
+	width: 474px;
+	height: 130px;
+	margin: auto;
+	margin-top: -130px;
+	text-align: center;
+}
+
+.logo img {
+	max-width: 400px;
+	max-height: 110px;
+}

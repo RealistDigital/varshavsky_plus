@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Візуалізації - Варшавський мікрорайон</title>
+	<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="public/css/swiper.min.css">
+	<link rel="stylesheet" href="public/css/style.css">
+
+	<script src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="public/js/libs/jquery-3.3.1.js"></script>
+	<script src="public/js/libs/swiper.min.js"></script>
+	<script src="public/js/script.js"></script>
+</head>
+<body>
+	<div class="body_wrapper bg_texture">
+
+		<header class="top_header">
+			<a href="stolitsagroup.com" class="stolitsa_logo" target="_blank"></a>
+
+			<a href="index.html" class="varshavsky_logo_small"></a>
+			
+			<div class="tel">
+				<p class="tel_num">067 219 49 53</p>
+			</div>
+					
+			<a href="javascript:void(0)" class="fb" target="_blank"><img class="fb_img" src="public/img/fb.png" alt="Facebook"></a>
+		</header>
+
+		<div class="title_line"></div>
+		<div class="page_name">
+			<h1 class="page_name_h1">Галерея</h1>
+			<h2 class="page_name_h2">Візуалізації</h2>
+		</div>
+		
+		<section class="gallery_container">
+			<div class="swiper_gallery_visual">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide visual_slide">
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+					</div>
+					<div class="swiper-slide visual_slide">
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+						<div class="visual_outer_wr">
+							<div class="gallery_visual_img"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev gallery_prev_sl"></div>
+   				<div class="swiper-button-next gallery_next_sl"></div>
+			</div>
+			<!-- POP-UP -->
+			<div class="pop-up_gallery">
+				<div class="close_pop-up_gallery"></div>
+				<div class="swiper_gallery_pop-up">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper_pop-up_slide">
+							<img src="public/files/gallery/318A9138.jpg" alt="Picture" class="gallery_pop-up_img">
+						</div>
+						<div class="swiper-slide swiper_pop-up_slide">
+							<img src="public/files/gallery/318A9149.jpg" alt="Picture" class="gallery_pop-up_img">
+						</div>
+						<div class="swiper-slide swiper_pop-up_slide">
+							<img src="public/files/gallery/318A9152.jpg" alt="Picture" class="gallery_pop-up_img">
+						</div>
+					</div>
+					<div class="swiper-button-prev pop-up_gallery_prev_sl"></div>
+   					<div class="swiper-button-next pop-up_gallery_next_sl"></div>
+				</div>
+			</div>
+
+		</section>
+
+		<nav class="menu">
+			<ul class="menu_item_container">
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text">Про комплекс</a>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Квартири</a></li>
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text menu_arrow">Покупцям</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Умови придбання</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Дозвільна документація</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Прес-центр</a></li>
+				<li class="menu_item"><a class="menu_item_text menu_arrow current_page" href="javascript:void(0)">Галерея</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Хід будівництва</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Візуалізації</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)" target="_blank">Забудовник</a></li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Контакти</a></li>
+			</ul>
+		</nav>
+				
+		<p class="copyright">&copy; 2018 ЖК "Варшавський мікрорайон". Усі права захищені. <a href="javascript:void(0)" class="room_details">Детальніше про Квартири</a></p>
+
+		<div id="dev"><a class="developer" href="http://realist.digital" target="_blank"><span> </span></a></div>
+
+	</div>	
+
+	<script>
+		$(document).ready(function(){
+			// MAIN SLIDER
+			var galleryVisualSwiper = new Swiper ('.swiper_gallery_visual', {
+				slidesPerView: 1,
+				navigation: {
+					prevEl: '.gallery_prev_sl',
+					nextEl: '.gallery_next_sl'
+				}
+			});
+
+			// POP-UP SLIDER
+			var galleryBuildingPopupSwiper = new Swiper ('.swiper_gallery_pop-up', {
+				navigation: {
+					prevEl: '.pop-up_gallery_prev_sl',
+					nextEl: '.pop-up_gallery_next_sl'
+				}
+			});
+
+			// SHOW/HIDE POP-UP
+			$('.gallery_visual_img').click(function(){
+				$('.pop-up_gallery').css({'visibility': 'visible', 'opacity': '1'});
+			});
+			$('.close_pop-up_gallery').click(function(){
+				$('.pop-up_gallery').css({'visibility': 'hidden', 'opacity': '0'});
+			});
+		})
+	</script>
+</body>
+</html>

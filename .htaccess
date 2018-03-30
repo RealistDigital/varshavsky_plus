@@ -1,0 +1,45 @@
+#--------------------------------------------------------------------------------------
+# Настройки системы / желательно не менять :(
+#--------------------------------------------------------------------------------------
+
+#Устанавливаем стандартную кодировку для сайта
+AddDefaultCharset utf-8
+
+#Включает или выключает работу механизма преобразования
+RewriteEngine on
+
+#Определяет условие при котором происходит преобразование
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+#Определяет правила для механизма преобразований
+#результат этих правил в место index.php?url=xxx будет site/adres - переобразование URL
+RewriteRule ^(.+)$ ?url=$1 [QSA,L]
+
+#Redirect с index.php на root
+#RewriteCond %{THE_REQUEST} ^.*/index.php 
+#RewriteRule ^(.*)index.php$ http://gigatrans.ua/$1 [R=301,L] 
+
+#Redirect с /ru на корень
+#RewriteRule ^(.*)/ru/$ http://bl_gigatrans.php/$1 [R=301,L]
+
+#--------------------------------------------------------------------------------------
+# Настройки безопасности / если не хочете что бы сайт взламали, то не меняйте настройки :)
+#--------------------------------------------------------------------------------------
+
+#Запрет просмотра содержания папок и запрет выполнение CGI скриптов
+Options All -Indexes -ExecCGI
+
+<Files bootstrap.php>
+deny from all
+</Files>
+
+#Отключаем Волшебные Кавычки ( что бы не ставилось /" /")  
+php_flag magic_quotes_gpc Off
+php_flag magic_quotes_runtime Off
+
+#контроль ошибок / НУЖНО ВКЛЮЧАТЬ КОГДА САЙТ ВЫШЕЛ В МИР
+#php_flag display_errors off
+#php_flag error_reporting Off
+

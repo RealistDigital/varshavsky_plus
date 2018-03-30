@@ -1,0 +1,58 @@
+// Офф сайт плеера
+http://uppod.ru/
+- login : niike90
+- pass  : 6001221
+
+// Подключение плеера 
+http://uppod.ru/help/q=html
+
+// JS управление плеером 
+http://uppod.ru/help/js/
+
+// В модальном окне FancyBox 
+// php code for modal
+
+<?php
+    // class
+    $modalClass = Lib::checkYoutubeLink($I['files']) && Lib::checkFlahsDevice () ? 'fancy-youtube-video' : 'fancy-video';
+    // link 
+    $linkVideo  = Lib::checkYoutubeLink($I['files']) && Lib::checkFlahsDevice () ? $I['files'] : SITE_ADDR.URL_PLUGINS.'uppod_player/modal/video.php?id='.$I['id'];
+?>
+<a href="<?=$linkVideo?>" class="showvid <?=$modalClass?>"><span class="textlinkvid">Показати відеоролик</span></a>
+
+
+// Подключение 
+
+<object id="идентификатор" type="application/x-shockwave-flash" data="ссылка_на_плеер" width="ширина" height="высота">
+   <param name="bgcolor" value="#ffffff" />
+   <param name="allowFullScreen" value="true" />
+   <param name="allowScriptAccess" value="always" />
+   <param name="wmode" value="window" />
+   <param name="movie" value="ссылка_на_плеер" />
+   <param name="flashvars" value="переменные_плеера" />
+</object>
+
+// Список переменных 
+http://uppod.ru/help/q=flashvars
+
+// Или 
+
+<object width="ширина" height="высота">
+   <param name="allowFullScreen" value="true" />
+   <param name="allowScriptAccess" value="always" />
+   <param name="wmode" value="window" />
+   <param name="movie" value="ссылка_на_плеер" />
+   <param name="flashvars" value="переменные_плеера" />
+   <embed src="ссылка_на_плеер" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="window" flashvars="переменные_плеера" width="ширина" height="высота"></embed>
+</object>
+
+// Рабочий пример
+
+<object id="player-1" type="application/x-shockwave-flash" data="http://<?=$_SERVER['HTTP_HOST']?><?=URL_PLUGINS?>uppod_player/player/uppod.swf" width="500" height="350">
+   <param name="bgcolor" value="#ffffff" />
+   <param name="allowFullScreen" value="true" />
+   <param name="allowScriptAccess" value="always" />
+   <param name="wmode" value="window" />
+   <param name="movie" value="http://<?=$_SERVER['HTTP_HOST']?><?=URL_PLUGINS?>uppod_player/player/uppod.swf" />
+    <param name="flashvars" value="file=http://<?=$_SERVER['HTTP_HOST']?><?=URL_PUBLIC?>files/video/test.mp4&" />
+</object>

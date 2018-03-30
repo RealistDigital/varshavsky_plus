@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/panorama.css" />
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/panorama.js"></script>
+        
+        <title>Panorama 360 - Example</title>
+    </head>
+<body>
+    <script type="text/javascript">
+        $(function(){
+            var frames = [
+                "img/test/oblot_fin0001.jpg",
+                "img/test/oblot_fin0002.jpg",
+                "img/test/oblot_fin0003.jpg",
+                "img/test/oblot_fin0004.jpg",
+                "img/test/oblot_fin0005.jpg",
+                "img/test/oblot_fin0006.jpg",
+                "img/test/oblot_fin0007.jpg",
+                "img/test/oblot_fin0008.jpg",
+                "img/test/oblot_fin0009.jpg",
+                "img/test/oblot_fin0010.jpg",
+                "img/test/oblot_fin0011.jpg",
+                "img/test/oblot_fin0012.jpg",
+                "img/test/oblot_fin0013.jpg",
+                "img/test/oblot_fin0014.jpg",
+                "img/test/oblot_fin0015.jpg",
+                "img/test/oblot_fin0016.jpg",
+                "img/test/oblot_fin0017.jpg",
+                "img/test/oblot_fin0018.jpg",
+                "img/test/oblot_fin0019.jpg",
+                "img/test/oblot_fin0020.jpg",
+                "img/test/oblot_fin0021.jpg",
+                "img/test/oblot_fin0022.jpg",
+                "img/test/oblot_fin0023.jpg",
+                "img/test/oblot_fin0024.jpg",
+                "img/test/oblot_fin0025.jpg",
+                "img/test/oblot_fin0026.jpg",
+                "img/test/oblot_fin0027.jpg",
+                "img/test/oblot_fin0028.jpg",
+                "img/test/oblot_fin0029.jpg",
+                "img/test/oblot_fin0030.jpg",
+                "img/test/oblot_fin0031.jpg",
+                "img/test/oblot_fin0032.jpg",
+                "img/test/oblot_fin0033.jpg",
+                "img/test/oblot_fin0034.jpg",
+                "img/test/oblot_fin0035.jpg",
+                "img/test/oblot_fin0036.jpg",
+                "img/test/oblot_fin0037.jpg",
+                "img/test/oblot_fin0038.jpg",
+                "img/test/oblot_fin0039.jpg",
+                "img/test/oblot_fin0040.jpg",
+                "img/test/oblot_fin0041.jpg",
+                "img/test/oblot_fin0042.jpg",
+                "img/test/oblot_fin0043.jpg",
+                "img/test/oblot_fin0044.jpg",
+                "img/test/oblot_fin0045.jpg",
+                "img/test/oblot_fin0046.jpg",
+                "img/test/oblot_fin0047.jpg",
+                "img/test/oblot_fin0048.jpg",
+                "img/test/oblot_fin0049.jpg",
+                "img/test/oblot_fin0050.jpg",
+                "img/test/oblot_fin0051.jpg",
+                "img/test/oblot_fin0052.jpg",
+                "img/test/oblot_fin0053.jpg",
+                "img/test/oblot_fin0054.jpg",
+                "img/test/oblot_fin0055.jpg",
+                "img/test/oblot_fin0056.jpg",
+                "img/test/oblot_fin0057.jpg",
+                "img/test/oblot_fin0058.jpg",
+                "img/test/oblot_fin0059.jpg",
+                "img/test/oblot_fin0060.jpg",
+                "img/test/oblot_fin0061.jpg",
+                "img/test/oblot_fin0062.jpg",
+                "img/test/oblot_fin0063.jpg",
+                "img/test/oblot_fin0064.jpg",
+                "img/test/oblot_fin0065.jpg",
+                "img/test/oblot_fin0066.jpg",
+                "img/test/oblot_fin0067.jpg",
+                "img/test/oblot_fin0068.jpg",
+                "img/test/oblot_fin0069.jpg",
+                "img/test/oblot_fin0070.jpg",
+                "img/test/oblot_fin0071.jpg",
+                "img/test/oblot_fin0072.jpg"
+            ];
+            
+            $('#house-panorama-360').panorama360({
+                width   : 720,
+                height  : 570,
+                frames  : frames,
+                auto    : true,
+                finish  : function ( key ) {
+                    console.log('load ajax - ' + key);
+                }
+            });
+            
+        });
+    </script>
+    <div id="debug"></div>
+    <div id="old-frame">
+        <div id="preloader"></div>
+        <div id="house-panorama-360"></div>
+    </div>
+    
+</body>
+</html>

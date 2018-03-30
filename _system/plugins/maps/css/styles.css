@@ -1,0 +1,18 @@
+#target-map-google {
+    padding:5px 7px;
+    border: 1px solid #333;
+    width: 320px;
+}
+#panel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -180px;
+    z-index:999;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+}
+.pac-container {
+    z-index:10000 !important;
+}

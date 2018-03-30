@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Квартири - Підбір по параметрам</title>
+	<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="public/css/swiper.min.css">
+	<link rel="stylesheet" href="public/css/jquery-ui.css">
+	<link rel="stylesheet" href="public/css/style.css">
+
+	<script src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="public/js/libs/jquery-3.3.1.js"></script>
+	<script src="public/js/libs/swiper.min.js"></script>
+	<script src="public/js/libs/scale.raphael.js"></script>
+	<script src="public/js/libs/raphael.min.js"></script>
+	<script src="public/js/draw_svg.js"></script>
+	<script src="public/js/script.js"></script>
+</head>
+<body>
+	<div class="body_wrapper bg_texture">
+
+		<header class="top_header">
+			<a href="stolitsagroup.com" class="stolitsa_logo" target="_blank"></a>
+
+			<a href="index.html" class="varshavsky_logo_small"></a>
+			
+			<div class="tel">
+				<p class="tel_num">067 219 49 53</p>
+			</div>
+					
+			<a href="javascript:void(0)" class="fb" target="_blank"><img class="fb_img" src="public/img/fb.png" alt="Facebook"></a>
+		</header>
+
+		<div class="page_name">
+			<h1 class="page_name_h1">Квартири</h1>
+			<h2 class="page_name_h2">Підбір по параметрам</h2>
+		</div>
+		
+		<section class="filter">
+			<form class="filter_form" action="#" method="#">
+				<div class="top_form_buttons">
+					<a class="all_houses" href="javascript:void(0)">Всі будинки</a>
+					<div class="choose_houses_wr">
+						<a class="choose_houses filt_current_btn" href="javascript:void(0)">Обрати будинок</a>
+						<a class="choose_houses_edit" href="javascript:void(0)">Редагувати</a>
+					</div>
+				</div>
+				<div id="rooms" class="filter_slide"></div>
+				<h4 class="filter_slide_title">Кількість спалень</h4>
+				<input id="rooms_from" type="hidden" name="rooms_from" value="0">
+	            <input id="rooms_to" type="hidden" name="rooms_to" value="5">
+				<div id="area" class="filter_slide"></div>
+				<h4 class="filter_slide_title">Площа, м<sup>2</sup></h4>
+				<input id="area_from" type="hidden" name="area_from" value="0">
+	            <input id="area_to" type="hidden" name="area_to" value="5">
+				<div id="level" class="filter_slide"></div>
+				<h4 class="filter_slide_title">Поверх</h4>
+				<input id="level_from" type="hidden" name="level_from" value="0">
+	            <input id="level_to" type="hidden" name="level_to" value="5">
+				<input class="filter_submit" type="submit" value="Підібрати">
+			</form>
+		</section>
+
+		<section class="filt_rooms">
+			<div class="swiper-container_rooms">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="filt_room_item">
+							<div class="filt_room_pic_wr"><img src="public/files/flats/flat_test.png" alt="flat" class="filt_room_pic"></div>
+							<div class='filt_room_description'>
+								<h2 class="filt_room_type">5D1</h2>
+								<div class="filt_room_area_wr">
+									<p class="overall_area">Загальна пл: 157.2 м<sup>2</sup></p>
+									<p class="live_area">Житлова пл: 157.2 м<sup>2</sup></p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<div class="rooms_pagin_wr">
+					<div id="rooms_pagin" class="swiper-pagination">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">1</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">2</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">3</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">4</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">5</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">6</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">7</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">8</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">9</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">10</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">11</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="rooms_pagin_item">12</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev rooms_prev_sl"></div>
+					<div class="swiper-button-next rooms_next_sl"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CHOOSE HOUSES POP-UP -->
+		<div class="choose_houses_pop-up bg_texture">
+
+			<div class="close_pop-up_filter"></div>
+
+			<div class="plan_wrapper">
+				<div class="plan_houses">
+					<div id="svg_plan_houses"></div>
+					<img src="public/files/house/plan_varshavsky.png" alt="План" id="houses_img">
+				</div>
+			</div>
+			<h1 class="choose_house">Оберіть <span>будинки</span></h1>
+			<a href="javascript:void(0)" class="apply_filter">Застосувати фільтр</a>
+			<a href="javascript:void(0)" class="close_houses"></a>
+			<img src="public/img/compas.png" alt="Компас" class="compas">
+		</div>
+
+		<nav class="menu">
+			<ul class="menu_item_container">
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text">Про комплекс</a>
+				</li>
+				<li class="menu_item"><a class="menu_item_text current_page" href="javascript:void(0)">Квартири</a></li>
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text menu_arrow">Покупцям</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Умови придбання</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Дозвільна документація</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Прес-центр</a></li>
+				<li class="menu_item"><a class="menu_item_text menu_arrow" href="javascript:void(0)">Галерея</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Хід будівництва</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Візуалізації</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)" target="_blank">Забудовник</a></li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Контакти</a></li>
+			</ul>
+		</nav>
+				
+		<p class="copyright">&copy; 2018 ЖК "Варшавський мікрорайон". Усі права захищені. <a href="javascript:void(0)" class="room_details">Детальніше про Квартири</a></p>
+
+		<div id="dev"><a class="developer" href="http://realist.digital" target="_blank"><span> </span></a></div>
+
+		<script src="public/js/libs/jquery-ui.min.js"></script>
+		<script>
+			//FILTER
+
+			/* ROOMS */
+	        $("#rooms").slider({
+			  range: true,
+			  min: 1,
+			  max: 5,
+			  values: [ 1, 4 ],
+			  slide: function( event, ui ) {
+			    $( "#rooms span.ui-slider-handle" ).first().find('span.span-inner').text(ui.values[ 0 ]);
+	            $( "#rooms span.ui-slider-handle" ).last().find('span.span-inner').text(ui.values[ 1 ]);
+			  },
+			  stop: function( event, ui ) {
+			  	$('#rooms_from').val(ui.values[ 0 ]);
+			    $('#rooms_to').val(ui.values[ 1 ]);
+			  }
+			});
+			$( "#rooms span.ui-slider-handle" ).first().prepend("<span class='span-inner'>"+$( "#rooms" ).slider( "values", 0 )+"</span>");
+			$( "#rooms span.ui-slider-handle" ).last().prepend("<span class='span-inner'>"+$( "#rooms" ).slider( "values", 1 )+"</span>"); 
+			
+			/* AREA */
+			$("#area").slider({
+			  range: true,
+			  min: 0,
+			  max: 125,
+			  values: [ 15, 105 ],
+			  slide: function( event, ui ) {
+			  	$( "#area span.ui-slider-handle" ).first().find('span.span-inner').text(ui.values[ 0 ]);
+	            $( "#area span.ui-slider-handle" ).last().find('span.span-inner').text(ui.values[ 1 ]);
+			  },
+			  stop: function( event, ui ) {
+			  	$('#area_from').val(ui.values[ 0 ]);
+			    $('#area_to').val(ui.values[ 1 ]);
+			  }
+			});
+			$( "#area span.ui-slider-handle" ).first().prepend("<span class='span-inner'>"+$( "#area" ).slider( "values", 0 )+"</span>");
+			$( "#area span.ui-slider-handle" ).last().prepend("<span class='span-inner'>"+$( "#area" ).slider( "values", 1 )+"</span>");
+			
+			/* LEVEL */
+			$("#level").slider({
+			  range: true,
+			  min: 1,
+			  max: 30,
+			  values: [ 4, 24 ],
+			  slide: function( event, ui ) {
+			   $( "#level span.ui-slider-handle" ).first().find('span.span-inner').text(ui.values[ 0 ]);
+	           $( "#level span.ui-slider-handle" ).last().find('span.span-inner').text(ui.values[ 1 ]);
+			  },
+			  stop: function( event, ui ) {
+			  	$('#level_from').val(ui.values[ 0 ]);
+			    $('#level_to').val(ui.values[ 1 ]);
+			  }
+			});
+			$( "#level span.ui-slider-handle" ).first().prepend("<span class='span-inner'>"+$( "#level" ).slider( "values", 0 )+"</span>");
+			$( "#level span.ui-slider-handle" ).last().prepend("<span class='span-inner'>"+$( "#level" ).slider( "values", 1 )+"</span>");
+
+			// SLIDER
+			function init_slider_filt(ID_galleryTop, ID_galleryThumbs, prev, next){
+				var galleryTop = new Swiper(ID_galleryTop, {
+					spaceBetween: 1
+				});
+				
+				var galleryThumbs = new Swiper(ID_galleryThumbs, {
+					spaceBetween: 0,
+					centeredSlides: true,
+					slidesPerView: '10',
+					touchRatio: 0.2,
+					slideToClickedSlide: true,
+					navigation: {
+						prevEl: prev,
+						nextEl: next,
+					}
+				});
+				galleryTop.controller.control = galleryThumbs;
+				galleryThumbs.controller.control = galleryTop;
+			}
+			init_slider_filt ('.swiper-container_rooms', '#rooms_pagin', '.rooms_prev_sl', '.rooms_next_sl');
+			$(window).resize(init_slider_filt);
+
+			// SHOW/HIDE POP-UP
+			$('.choose_houses').click(function(){
+				$('.choose_houses_pop-up').css({'visibility': 'visible', 'opacity': '1'});
+			});
+			$('.close_pop-up_filter').click(function(){
+				$('.choose_houses_pop-up').css({'visibility': 'hidden', 'opacity': '0'});
+			});
+		</script>
+
+		<script>
+			jQuery(document).ready(function ($) {
+
+				setTimeout(function(){
+					/* House Options */
+			        var screenImage = $('#houses_img');
+			        var theImage = new Image();
+			        theImage.src = screenImage.attr('src');
+
+			        var imageWidth = theImage.width;
+			        var imageHeight = theImage.height;
+			        /*theImage.onload = function(){
+			            // $('.floorFull').css('height', imageHeight)
+			        }*/
+
+					if(imageWidth==0) imageWidth = 870;
+			           if(imageHeight==0) imageHeight = 965;
+
+
+
+					/*--First stage - Floor img---*/
+				    $().drawSvg("init",{
+				        wrapInitName    : "svg_plan_houses",
+				        linesName       : "line1",
+				        raphaelName     : "firstRaphael",
+				        wpDrawSvg       : "svggroup1",
+				        widthScale      : imageWidth,
+				        heightScale     : imageHeight
+				    });
+
+
+					/* First Raphael */
+					$().drawSvg('draw', {
+							href : '/ua/apartments/231/233/',
+							path : 'M0 467,L0 550,L635 549,L634 467Z',
+					        idLine : '233',
+							linesName  : 'line1',
+			                raphaelName : 'firstRaphael',
+							fill : '#333',
+							opacity : 1,
+							houseStateId:1
+					    });
+
+					$().drawSvg('draw', {
+							href : '/ua/apartments/231/233/',
+							path : 'M100 567,L100 850,L935 459,L674 767Z',
+					        idLine : '4',
+							linesName  : 'line1',
+			                raphaelName : 'firstRaphael',
+							fill : '#0000',
+							opacity : 1,
+					    });
+
+					/*---resizing svg----*/
+				    function resizePage () {
+				    	var newWidth = $('.plan_houses').width(),
+				    		newHeigth = $('.plan_houses').height();
+				        $().drawSvg('resize', {
+				            raphaelName : 'firstRaphael',
+				            imgWidth    : newWidth,
+				            imgHeight   : newHeigth
+				        });
+				       
+				    }
+
+			           $(window).resize(resizePage);
+			           resizePage ();
+				}, 500);
+			});
+		</script>
+	</div>	
+</body>
+</html>

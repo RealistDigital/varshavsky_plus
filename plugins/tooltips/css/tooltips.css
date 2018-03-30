@@ -1,0 +1,36 @@
+.tool-tip-close-button {
+    position: absolute;
+    top:3px;
+    right:3px;
+    z-index:200;
+    width: 14px;
+    height: 14px;
+    background: url("../img/tips-close.png") no-repeat center;
+    /*background-size: 70% 70%;*/
+    overflow: hidden;
+    text-indent: -99px;
+}
+.tool-tip-close-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.tool-tip-arrow {
+    width: 21px;
+    height:10px;
+    position: absolute;
+    top:-10px;
+    left: 30px;
+    background: url("../img/arrow-shadow-while.png") no-repeat center;
+}
+
+/** styles content block */
+.toolTipContent {
+    border:none !important;
+    box-shadow: 0px 0px 3px 1px #D8D8D8;
+    font: 12px Tahoma, sans-serif;
+    color:#666;
+    background-color: #F7F7F7 !important;
+}
+.style-tips:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/tooltips.css">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/tooltips.js"></script>
+    
+    <title>Пример ToolTips</title>
+</head>
+<body>
+<header>
+    <script type="text/javascript">
+        $(function(){
+            // Tips
+            $('.tooltip').toolTips({
+                contentBlock    : '.toolTipContent',
+                left            : -200,
+                top             : 5,  
+                arrow           : true    
+            });
+        });
+    </script>
+    <br><br>
+    <!-- Tips -->
+    <span class="tooltip style-tips" style="margin-left: 300px;">
+        <img src="img/ask.jpg" style="margin: 0px 0 20px 10px;" alt="" />
+        <div class="toolTipContent">Тестовый контент ToolTips</div>
+    </span>
+</header>
+</body>
+</html>

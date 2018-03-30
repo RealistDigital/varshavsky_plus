@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Планування квартир - Варшавський мікрорайон</title>
+	<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="public/css/style.css">
+
+	<script src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="public/js/libs/jquery-3.3.1.js"></script>
+	<script src="public/js/libs/scale.raphael.js"></script>
+	<script src="public/js/libs/raphael.min.js"></script>
+	<script src="public/js/draw_svg.js"></script>
+</head>
+<body>
+	<div class="choose_houses_pop-up bg_texture">
+
+		<div class="close_pop-up_filter"></div>
+
+		<div class="plan_wrapper">
+			<div class="plan_houses">
+				<div id="svg_plan_houses"></div>
+				<img src="public/files/house/plan_varshavsky.png" alt="План" id="houses_img">
+			</div>
+		</div>
+		<h1 class="choose_house">Оберіть <span>будинки</span></h1>
+		<a href="javascript:void(0)" class="apply_filter">Застосувати фільтр</a>
+		<a href="javascript:void(0)" class="close_houses"></a>
+		<img src="public/img/compas.png" alt="Компас" class="compas">
+	</div>
+
+	<script>
+		jQuery(document).ready(function ($) {
+
+			setTimeout(function(){
+				/* House Options */
+		        var screenImage = $('#houses_img');
+		        var theImage = new Image();
+		        theImage.src = screenImage.attr('src');
+
+		        var imageWidth = theImage.width;
+		        var imageHeight = theImage.height;
+		        /*theImage.onload = function(){
+		            // $('.floorFull').css('height', imageHeight)
+		        }*/
+
+				if(imageWidth==0) imageWidth = 870;
+		           if(imageHeight==0) imageHeight = 965;
+
+
+
+				/*--First stage - Floor img---*/
+			    $().drawSvg("init",{
+			        wrapInitName    : "svg_plan_houses",
+			        linesName       : "line1",
+			        raphaelName     : "firstRaphael",
+			        wpDrawSvg       : "svggroup1",
+			        widthScale      : imageWidth,
+			        heightScale     : imageHeight
+			    });
+
+
+				/* First Raphael */
+				$().drawSvg('draw', {
+						href : '/ua/apartments/231/233/',
+						path : 'M0 467,L0 550,L635 549,L634 467Z',
+				        idLine : '233',
+						linesName  : 'line1',
+		                raphaelName : 'firstRaphael',
+						fill : '#333',
+						opacity : 1,
+						houseStateId:1
+				    });
+
+				$().drawSvg('draw', {
+						href : '/ua/apartments/231/233/',
+						path : 'M100 567,L100 850,L935 459,L674 767Z',
+				        idLine : '4',
+						linesName  : 'line1',
+		                raphaelName : 'firstRaphael',
+						fill : '#0000',
+						opacity : 1,
+				    });
+
+				/*---resizing svg----*/
+			    function resizePage () {
+			    	var newWidth = $('.plan_houses').width(),
+			    		newHeigth = $('.plan_houses').height();
+			        $().drawSvg('resize', {
+			            raphaelName : 'firstRaphael',
+			            imgWidth    : newWidth,
+			            imgHeight   : newHeigth
+			        });
+			       
+			    }
+
+		           $(window).resize(resizePage);
+		           resizePage ();
+			}, 500);
+		});
+	</script>
+</body>
+</html>

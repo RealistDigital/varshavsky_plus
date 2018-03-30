@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Мікрорайон - Розташування</title>
+	<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
+
+	<link rel="stylesheet" href="public/css/swiper.min.css">
+	<link rel="stylesheet" href="public/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="public/css/style.css">
+
+	<script src="public/js/libs/jquery-3.3.1.min.js"></script>
+	<script src="public/js/libs/jquery-3.3.1.js"></script>
+	<script src="public/js/libs/swiper.min.js"></script>
+	<script src="public/js/libs/jquery.mCustomScrollbar.js"></script>
+	<script src="public/js/script.js"></script>
+</head>
+<body>
+	<div class="body_wrapper">
+
+		<div class="map_opacity_top_bg"></div>
+		<div class="map_opacity_bottom_bg"></div>
+
+		<header class="top_header">
+			<a href="stolitsagroup.com" class="stolitsa_logo" target="_blank"></a>
+
+			<a href="index.html" class="varshavsky_logo_small"></a>
+			
+			<div class="tel no_border">
+				<p class="tel_num">067 219 49 53</p>
+			</div>
+					
+			<a href="javascript:void(0)" class="fb" target="_blank"><img class="fb_img" src="public/img/fb.png" alt="Facebook"></a>
+		</header>
+		
+		<div class="title_line"></div>
+		<div class="page_name">
+			<h1 class="page_name_h1">Мікрорайон</h1>
+			<h2 class="page_name_h2">Розташування</h2>
+		</div>
+
+		<div class="markers_list_wr">
+			<div class="markers_list_btn_wr">
+				<button class="markers_list_btn directions_ico">Прокласти маршрут</button>
+				<div class="markers_list">
+					<p class="markers_list_item">від м Оболонь</p>
+					<p class="markers_list_item">від м Мінська</p>
+					<p class="markers_list_item">від м Дорогожичі</p>
+					<p class="markers_list_item">від м Сирець</p>
+					<p class="markers_list_item">від м Петрівка</p>
+					<p class="markers_list_item">від м Вокзальна</p>
+					<p class="markers_list_item">від м Нивки</p>
+				</div>
+			</div>
+			<div class="markers_list_btn_wr">
+				<button class="markers_list_btn infrastruture_ico">Інфраструктура</button>
+				<div class="markers_list">
+					<p class="markers_list_item">Навчальні / дитячі заклади</p>
+					<p class="markers_list_item">Медичні заклади</p>
+					<p class="markers_list_item">Супермаркети</p>
+					<p class="markers_list_item">Побутові послуги</p>
+					<p class="markers_list_item">Спорт / розваги</p>
+				</div>
+			</div>
+		</div>
+
+		<nav class="menu">
+			<ul class="menu_item_container">
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text">Про комплекс</a>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Квартири</a></li>
+				<li class="menu_item"><a href="javascript:void(0)" class="menu_item_text menu_arrow">Покупцям</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Умови придбання</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Дозвільна документація</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Прес-центр</a></li>
+				<li class="menu_item"><a class="menu_item_text menu_arrow current_page" href="javascript:void(0)">Галерея</a>
+					<ul class="sub_menu">
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Хід будівництва</a></li>
+						<li class="sub_menu_item"><a class="sub_menu_item_text" href="javascript:void(0)">Візуалізації</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)" target="_blank">Забудовник</a></li>
+				<li class="menu_item"><a class="menu_item_text" href="javascript:void(0)">Контакти</a></li>
+			</ul>
+		</nav>
+				
+		<p class="copyright">&copy; 2018 ЖК "Варшавський мікрорайон". Усі права захищені. <a href="javascript:void(0)" class="room_details">Детальніше про Квартири</a></p>
+
+		<div id="dev"><a class="developer" href="http://realist.digital" target="_blank"><span> </span></a></div>
+
+	</div>	
+	
+	<!-- MAP -->
+	<div id="map"></div>
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		var coordinatesContact = new google.maps.LatLng(50.505235, 30.419074);
+	    var coordinatesCenter  = new google.maps.LatLng(50.505235, 30.419074);
+
+	    function initializeContact() {
+	        var mapOptionsContact = {
+	            center: coordinatesCenter,
+	            zoom: 14,
+	            disableDefaultUI: true,
+				scrollwheel: true,
+	            styles: [
+					    // {
+					    //     "featureType": "landscape",
+					    //     "elementType": "labels.text",
+					    //     "stylers": [
+					    //         {
+					    //             "visibility": "off"
+					    //         }
+					    //     ]
+					    // },
+					    
+					    {
+					        "featureType": "poi",
+					        "elementType": "labels",
+					        "stylers": [
+					            {
+					                "visibility": "off"
+					            }
+					        ]
+					    },
+					    {
+					        "featureType": "road",
+					        "elementType": "geometry.fill",
+					        "stylers": [
+					            {
+					                "color": "#dfd4c7"
+					            }
+					        ]
+					    },
+					    {
+					        "featureType": "road",
+					        "elementType": "geometry.stroke",
+					        "stylers": [
+					            {
+					                "visibility": "off"
+					            },
+					            {
+					                "color": "#dfd4c7"
+					            }
+					        ]
+					    },
+					    {
+					        "featureType": "road",
+					        "elementType": "labels.text.fill",
+					        "stylers": [
+					            {
+					                "color": "#604c37"
+					            }
+					        ]
+					    },
+					    {
+					        "featureType": "road",
+					        "elementType": "labels.text.stroke",
+					        "stylers": [
+					            {
+					                "visibility": "on"
+					            },
+					            {
+					                "color": "#ffffff"
+					            }
+					        ]
+					    },
+					    
+					]
+	        };
+
+	        var pointerContact = new google.maps.Marker({
+	            position: coordinatesContact,
+	            icon: 'public/files/map_marker.png',
+	        });
+
+	        var mapContact = new google.maps.Map(document.getElementById("map"), mapOptionsContact);
+
+	        pointerContact.setMap(mapContact);
+	    }
+
+	    google.maps.event.addDomListener(window, 'load', initializeContact);
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			// SHOW/HIDE SIDE BUTTONS
+			$(".markers_list_btn").click(function(){
+
+				var btnList = $('.markers_list_wr').find('.markers_list'); // get array of items lists
+
+				for (var i = 0; i < btnList.length; i++){
+					if(btnList.eq(i).height() > 0) btnList.eq(i).height(0); // if any items list open hide him
+				}
+
+				if($(this).next().height() == 0){
+					var height = 0,
+						list = $(this).next().find('.markers_list_item'); // get array of items in list
+
+					for (var j = 0; j < list.length; j++){
+						height += (list.eq(j).height() + 10); // push (height + margin) of every item to result height
+					}
+
+					$(this).next().height(height); // set height to list
+				}
+
+			});
+
+		})
+	</script>
+</body>
+</html>

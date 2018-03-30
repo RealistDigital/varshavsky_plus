@@ -1,0 +1,26 @@
+.modal-window {
+    position: absolute;
+    z-index:5000;
+    top:0;
+    left:0;
+    display: none;
+}
+/** Fixed */
+.modal-block {
+    position: fixed;
+    z-index:100;
+}
+.cloce-modal-window {
+    position: absolute;
+    z-index:100;
+    width: 26px;
+    height: 26px;
+    top:-28px;
+    right:-28px;
+    overflow: hidden;
+    text-indent: -100px;
+    background:url("../img/close.png") no-repeat;
+}
+.cloce-modal-window:hover {
+    opacity: 0.8;
+}
